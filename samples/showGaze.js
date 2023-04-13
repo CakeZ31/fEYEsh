@@ -3,6 +3,7 @@
 
 // show gaze information on screen.
 function showGazeInfoOnDom (gazeInfo) {
+    showGazeDotOnDom(gazeInfo)
     let gazeInfoDiv = document.getElementById("gazeInfo")
     gazeInfoDiv.innerText = `Gaze Information Below
                            \nx: ${gazeInfo.x}

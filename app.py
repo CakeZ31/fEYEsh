@@ -21,7 +21,7 @@ class Questions(db.Model):
 
 @app.route("/")
 def home():
-    return render_template()
+    return render_template('/templates/index.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

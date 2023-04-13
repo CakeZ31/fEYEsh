@@ -1,12 +1,15 @@
 import 'regenerator-runtime/runtime';
 import EasySeeSo from 'seeso/easy-seeso';
-import showGaze from "../showGaze";
+import showGaze from "../showGaze.js";
 
 const licenseKey = 'dev_ae171a1si0eryn930qa5hdu53j1q9t01zgkp41pj';
+const var_x = gazeInfo.x;
+const var_y = gazeInfo.y;
+
 
 function onClickCalibrationBtn(){
-    const userId = 'YOUR_USER_ID'; // ex) 5e9easf293
-    const redirectUrl = 'http://localhost:8082';
+    const userId = ' brandonortega33'; // ex) 5e9easf293
+    const redirectUrl = 'http://localhost:5000';
     const calibrationPoint = 5;
     EasySeeSo.openCalibrationPage(licenseKey, userId, redirectUrl, calibrationPoint);
 }
@@ -23,7 +26,7 @@ function parseCalibrationDataInQueryString () {
 
 // gaze callback.
 function onGaze(gazeInfo) {
-    // do something with gaze info.
+
     showGaze(gazeInfo)
 }
 

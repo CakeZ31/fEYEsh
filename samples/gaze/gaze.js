@@ -1,6 +1,6 @@
 import 'regenerator-runtime/runtime';
 
-import showGaze from "../showGaze";
+import showGaze from "../showGaze.js";
 
 // npm module
 import EasySeeSo from 'seeso/easy-seeso';
@@ -18,9 +18,19 @@ function onDebug(FPS, latency_min, latency_max, latency_avg){
   // do something with debug info.
 }
 
+// function parseCalibrationDataInQueryString () {
+//     const href = window.location.href
+//     const decodedURI = decodeURI(href)
+//     const queryString = decodedURI.split('?')[1];
+//     if (!queryString) return undefined
+//     const jsonString = queryString.slice("calibrationData=".length, queryString.length)
+//     return jsonString
+// }
+
 
 async function main() {
   const seeSo = new EasySeeSo();
+  // const calibrationData = parseCalibrationDataInQueryString()
   /**
    * set monitor size.    default: 16 inch.
    * set face distance.   default: 30 cm.
